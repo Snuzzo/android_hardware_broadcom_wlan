@@ -16,7 +16,9 @@
 
 ########################
 
-ifeq ($(strip $(WIFI_BAND)),802_11_ABG)
+ifeq ($(strip $TARGET_DEVICE)),p1c)
+BCM_FW_SRC_FILE_STA := fw_bcm4329.bin
+elif ($(strip $(WIFI_BAND)),802_11_ABG)
 BCM_FW_SRC_FILE_STA := fw_bcm4329_abg.bin
 else
 BCM_FW_SRC_FILE_STA := fw_bcm4329.bin
